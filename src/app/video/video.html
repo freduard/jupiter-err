@@ -1,0 +1,12 @@
+<div class="p-8 pt-16 text-white flex flex-col gap-12 w-screen h-screen overflow-scroll" style="background: radial-gradient(ellipse at top, #0e7490, #164e63, #083344);">
+    @for (item of data; track $index) {
+        <div class="flex flex-col gap-4">
+            <h1 class="uppercase text-3xl font-semibold">{{item.header}}</h1>
+            <div class="flex h-96 gap-4">
+                @for (video of item.data; track $index) {
+                    <img src="{{video.verticalPhotos[0].photoUrlBase}}" class="rounded" alt="">
+                }
+            </div>
+        </div>
+    }
+</div>
