@@ -2,11 +2,20 @@
     @for (item of data; track $index) {
         <div class="flex flex-col gap-4">
             <h1 class="uppercase text-3xl font-semibold">{{item.header}}</h1>
-            <div class="flex h-96 gap-4">
+            <swiper-container slides-per-view="7" speed="500" navigation="true">
                 @for (video of item.data; track $index) {
-                    <img src="{{video.verticalPhotos[0].photoUrlBase}}" class="rounded" alt="">
+                    <swiper-slide><img src="{{video.verticalPhotos[0].photoUrlBase}}" class="rounded h-96" alt=""></swiper-slide>
                 }
-            </div>
+            </swiper-container>
         </div>
     }
 </div>
+<!-- <swiper-container slides-per-view="1" speed="500" loop="true" navigation="true">
+  <swiper-slide class="border-black bg-red-600"><img src="/jupiter_logo-full_ua.svg" class="rounded" alt=""></swiper-slide>
+  <swiper-slide class="border-black bg-red-600"><img src="/jupiter_logo-full_ua.svg" class="rounded" alt=""></swiper-slide>
+  <swiper-slide class="border-black bg-red-600"><img src="/jupiter_logo-full_ua.svg" class="rounded" alt=""></swiper-slide>
+  <swiper-slide class="border-black bg-red-600"><img src="/jupiter_logo-full_ua.svg" class="rounded" alt=""></swiper-slide>
+  <swiper-slide class="border-black bg-red-600"><img src="/jupiter_logo-full_ua.svg" class="rounded" alt=""></swiper-slide>
+  <swiper-slide class="border-black bg-red-600"><img src="/jupiter_logo-full_ua.svg" class="rounded" alt=""></swiper-slide>
+  <swiper-slide class="border-black bg-red-600"><img src="/jupiter_logo-full_ua.svg" class="rounded" alt=""></swiper-slide>
+</swiper-container> -->

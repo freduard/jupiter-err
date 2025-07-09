@@ -1,11 +1,12 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-video',
   imports: [HttpClientModule],
   templateUrl: './video.html',
-  styleUrl: './video.css'
+  styleUrl: './video.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Video implements OnInit {
   httpClient = inject(HttpClient)
