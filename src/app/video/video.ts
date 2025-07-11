@@ -1,5 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import "swiper/css"
+import "swiper/css/navigation"
 
 @Component({
   selector: 'app-video',
@@ -23,6 +25,7 @@ export class Video implements OnInit {
         console.log(data.data.category.frontPage)
         this.data = data.data.category.frontPage
         this.data.shift()
+        this.data.splice(1, 1)
       })
   }
 }

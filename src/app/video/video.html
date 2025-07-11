@@ -1,8 +1,8 @@
-<div class="p-8 pt-16 text-white flex flex-col gap-12 w-screen h-screen overflow-scroll" style="background: radial-gradient(ellipse at top, #0e7490, #164e63, #083344);">
+<div class="p-8 pt-16 text-white flex flex-col gap-12 w-screen h-screen overflow-scroll" style="background: radial-gradient(ellipse at top, #0e7490, #164e63, #083344); overflow: auto;">
     @for (item of data; track $index) {
         <div class="flex flex-col gap-4">
             <h1 class="uppercase text-3xl font-semibold">{{item.header}}</h1>
-            <swiper-container slides-per-view="7" speed="500" navigation="true">
+            <swiper-container class="swiperCont" slides-per-view="7" speed="250" navigation="true" pagination="true" pagination-type="progressbar" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;">
                 @for (video of item.data; track $index) {
                     <swiper-slide><img src="{{video.verticalPhotos[0].photoUrlBase}}" class="rounded h-96" alt=""></swiper-slide>
                 }
